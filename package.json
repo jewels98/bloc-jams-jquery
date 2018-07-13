@@ -1,0 +1,26 @@
+{
+  "name": "bloc-jams-jquery",
+  "version": "1.0.0",
+  "description": "music-app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jewels98/bloc-jams-jquery.git"
+  },
+  "keywords": [
+    "jewels",
+    "media",
+    "school",
+    "portfolio",
+    "bloc-jams"
+  ],
+  "author": "jewls98",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jewels98/bloc-jams-jquery/issues"
+  },
+  "homepage": "https://github.com/jewels98/bloc-jams-jquery#readme"
+}
