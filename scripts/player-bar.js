@@ -1,10 +1,10 @@
-$(document).ready(function () {
+{
     $('button#play-pause').click(function () {
-        helper.playPauseAndUpdate();
         $(this).attr('playState', player.playState);
+        helper.playPauseAndUpdate();
     });
 
-    $('button#next').click(function () {
+    $('button#next').on('click', function () {
         if (player.playState !== 'playing') {
             return;
         }
@@ -18,7 +18,7 @@ $(document).ready(function () {
         helper.playPauseAndUpdate(nextSong);
     });
 
-    $('button#previous').click(function () {
+    $('button#previous').on('click', function () {
         if (player.playState !== 'playing') {
             return;
         }
@@ -49,5 +49,5 @@ $(document).ready(function () {
         player.setVolume(event.target.value);
     });
 
-});
+}
 

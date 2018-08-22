@@ -8,6 +8,7 @@
             <span class = "ion-play"></span>
             <span class = "ion-pause"></span> 
           </button>
+          </td>
          <td>${song.title}</td>
          <td>${player.prettyTime(song.duration)}</td>
         </tr>

@@ -48,6 +48,7 @@ class Player {
       this.playState = 'paused';
       this.currentlyPlaying.element.removeClass('playing').addClass('paused');
     }
+    $('#time-control .total-time').text(player.prettyTime(this.currentlyPlaying.duration));
   }
   
   skipTo (percent) {
