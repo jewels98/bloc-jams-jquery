@@ -1,10 +1,10 @@
-$(document).ready(function () {
+{
     $('button#play-pause').click(function () {
-        helper.playPauseAndUpdate();
         $(this).attr('playState', player.playState);
+        helper.playPauseAndUpdate();
     });
 
-    $('button#next').click(function () {
+    $('button#next').on('click', function () {
         if (player.playState !== 'playing') {
             return;
         }
@@ -18,7 +18,7 @@ $(document).ready(function () {
         helper.playPauseAndUpdate(nextSong);
     });
 
-    $('button#previous').click(function () {
+    $('button#previous').on('click', function () {
         if (player.playState !== 'playing') {
             return;
         }
@@ -35,20 +35,12 @@ $(document).ready(function () {
         player.skipTo(event.target.value);
     });
 
-<<<<<<< HEAD
-    setInterval(() => {
-=======
         setInterval( () => {
->>>>>>> parent of 56bbd5a... Fixed an error checkpoint: completed
         if(player.playState !== 'playing') { return; }
         const currentTime = player.getTime();
         const duration = player.getDuration();
         const percent = (currentTime / duration) * 100;
-<<<<<<< HEAD
-        $('#time-control .current-time').text(player.prettyTime(currentTime));
-=======
-        $('time-control.current-time').text(currentTime);
->>>>>>> parent of 56bbd5a... Fixed an error checkpoint: completed
+        $('#time-control.current-time').text(player.prettyTime(currentTime));
         $('#time-control input').val(percent);
     }, 1000);
 
@@ -57,5 +49,5 @@ $(document).ready(function () {
         player.setVolume(event.target.value);
     });
 
-});
+}
 

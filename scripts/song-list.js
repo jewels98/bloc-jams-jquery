@@ -8,14 +8,15 @@
             <span class = "ion-play"></span>
             <span class = "ion-pause"></span> 
           </button>
+          </td>
          <td>${song.title}</td>
          <td>${player.prettyTime(song.duration)}</td>
         </tr>
      `);
 
      song.element.on('click', event => {
+       $('button#play-pause').attr('playState', player.playState);
         helper.playPauseAndUpdate(song);
-        $('button#play-pause').attr('playState', playState);
      });
 
      $('#song-list').append(song.element);
