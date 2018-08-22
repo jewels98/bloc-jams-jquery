@@ -35,20 +35,12 @@ $(document).ready(function () {
         player.skipTo(event.target.value);
     });
 
-<<<<<<< HEAD
     setInterval(() => {
-=======
-        setInterval( () => {
->>>>>>> parent of 56bbd5a... Fixed an error checkpoint: completed
         if(player.playState !== 'playing') { return; }
         const currentTime = player.getTime();
         const duration = player.getDuration();
         const percent = (currentTime / duration) * 100;
-<<<<<<< HEAD
         $('#time-control .current-time').text(player.prettyTime(currentTime));
-=======
-        $('time-control.current-time').text(currentTime);
->>>>>>> parent of 56bbd5a... Fixed an error checkpoint: completed
         $('#time-control input').val(percent);
     }, 1000);
 
