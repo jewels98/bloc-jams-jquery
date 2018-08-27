@@ -28,12 +28,8 @@ class Player {
   
   playPause (song = this.currentlyPlaying) {
     if (this.currentlyPlaying !== song) {
-      // Stop the currently playing sound file (even if nothing is playing)
       this.soundObject.stop();
-      // Clear classes on the song that's currently playing
       this.currentlyPlaying.element.removeClass('playing paused');
-      
-      // Update our currentlyPlaying and playState properties
       this.currentlyPlaying = song;
       this.playState = 'stopped';
       this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
